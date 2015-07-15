@@ -2,69 +2,69 @@
 /* CSS Document */
 
 /* Page reset */
-body,h1,h2,h3,h4,h5,h6,p,quote,small,form,label,input,img,a,ul,ol,li			{margin:0px; padding:0px; text-decoration:none; outline:none; border-style:none; font-family:'PT Sans', Arial, Helvetica, sans-serif; letter-spacing:0px; line-height:1.2em; color:#bbbbbb; font-size:13px; font-style:normal; font-weight:normal; text-align:left; border: 0; }
+body,h1,h2,h3,h4,h5,h6,p,quote,small,form,label,input,img,a,ul,ol,li	{margin:0px; padding:0px; text-decoration:none; outline:none; border-style:none; font-family:'PT Sans', Arial, Helvetica, sans-serif; letter-spacing:0px; line-height:1.2em; color:#bbbbbb; font-size:13px; font-style:normal; font-weight:normal; text-align:left; border: 0; }
 
 /*-- a:link,a:visited {color:#bbbbbb; } --*/
-a:hover 					{color:#666666; }
+a:hover 				{color:#999999; }
 a:active,a:focus 		{color:#444444; }
-h1,h2,h3,h4,h5,h6,p	{margin-bottom:1em; }
+h3,h4,h5,h6,p			{margin-bottom:1em; }
 h5 						{font-weight:bold; color:#ffffff; }
-h2 						{color:#ffffff; font-size:36px; margin:0px; padding:0px; }
+h1,h2					{color:#ffffff; font-size:36px; margin:0px; padding:0px; line-height:1em; }
 
 /*--Loads the background, centres the page in the browser and puts the transparent bar on the page--*/
-body 						{background-color:#000000; background-image:url(images/bgpage.png); background-repeat:no-repeat; background-position:left 0px; }
+body 					{background-color:#000000; background-image:url(images/bgpage.png); background-repeat:no-repeat; background-position:left 0px; }
 #bodycontainer			{margin:0px auto; width:1000px; top:0px; position:relative; z-index:0; } /*Centres the page*/
 
 /*--Menu Bar Generic Attributes--*/
-#nav 						{width:100%; height:175px; top:0px; left:0px; position:absolute; z-index:1; background-image:url(images/bgtransparent.png); }
+#nav 					{width:100%; height:175px; top:0px; left:0px; position:absolute; z-index:1; background-image:url(images/bgtransparent.png); }
 #menulist 				{list-style-image:none; list-style-type:none; text-align:center; margin-top:70px; }
 #menulist li			{display: inline; padding-left:15px; padding-right:15px; }
 #menulist a 			{color: #ffffff; font-size: 24px; }
 #menulist a:hover		{text-shadow: 0px 0px 10px #ffffff,0px 0px 10px #ffffff; } 
 
 /*--Displays the 'Selected' bar under the each menu item - hidden by the javascript--*/
-.selectednojava		{width:60px; height:2px; top:110px; background:#ffffff; position:absolute; z-index:0 }
+.selectednojava			{width:60px; height:2px; top:110px; background:#ffffff; position:absolute; z-index:0 }
 #selected				{width:60px; height:2px; background:#ffffff; position:absolute; left:252px; top:110px; display:none; z-index:0; } /*--Displayed and moved by the javascript--*/
 
 /*--Main Content Window--*/
 #contentwindow 		{width:1000px; height:666px; position:relative; overflow:hidden; z-index:0; } /*--Sets the 'viewing window' of the pages--*/
 
 /*--Each class below contains the contents of each respective 'section'--*/
-.homepage 			{width:1000px; height:666px; position:relative; background-image:url(images/imgmain1.jpg); overflow:hidden; }
-.companypage 		{width:1000px; height:666px; position:relative; background-image:url(images/imgmain2.jpg); overflow:hidden; }
-.approachpage 		{width:1000px; height:666px; position:relative; background-image:url(images/imgmain3.jpg); overflow:hidden; }
-.passionpage 		{width:1000px; height:666px; position:relative; background-image:url(images/imgmain4.jpg); overflow:hidden; }
-.expertisepage		{width:1000px; height:666px; position:relative; background-image:url(images/imgmain5.jpg); overflow:hidden; }
-.successpage 		{width:1000px; height:666px; position:relative; background-image:url(images/imgmain6.jpg); overflow:hidden; }
-.socialisepage 	{width:1000px; height:666px; position:relative; background-image:url(images/imgmain7.jpg); overflow:hidden; }
-.contactuspage 	{width:1000px; height:666px; position:relative; background-image:url(images/imgmain8.jpg); overflow:hidden; }
+.homepage 			{width:1000px; height:666px; position:relative; background-image:url(images/imgmain1.jpg); overflow:hidden; background-size:1000px 666px; }
+.companypage 		{width:1000px; height:666px; position:relative; background-image:url(images/bgabout.jpg); overflow:hidden; background-size:1000px 666px;  }
+.approachpage 		{width:1000px; height:666px; position:relative; background-image:url(images/bgapproach.jpg); overflow:hidden; background-size:1000px 666px; }
+.passionpage 		{width:1000px; height:666px; position:relative; background-image:url(images/bgpeople.jpg); overflow:hidden; background-size:1000px 666px; }
+.expertisepage		{width:1000px; height:666px; position:relative; background-image:url(images/bgexpertise.jpg); overflow:hidden; background-size:1000px 666px; }
+.successpage 		{width:1000px; height:666px; position:relative; background-image:url(images/bgsuccess.jpg); overflow:hidden; background-size:1000px 666px; }
+.socialisepage 		{width:1000px; height:666px; position:relative; background-image:url(images/bgsocialise.jpg); overflow:hidden; background-size:1000px 666px; }
+.contactuspage 		{width:1000px; height:666px; position:relative; background-image:url(images/bgcontactus.jpg); overflow:hidden; background-size:1000px 666px; }
 
 /*--These styles help set up the pages and sections moving around within the window--*/
 .pagecontainer			{width:1000px; height:666px; position:absolute; overflow:hidden; z-index:1; } /*--The container of all the divs for each 'section'--*/
 .page 					{width:1000px; height:666px; position:relative; overflow:hidden; } /*--Styles each page (div) of content within each 'section'--*/
-.diarypagecontainer	{width:370px; height:576px; top:0px; left:495px; position:relative; overflow:hidden; } /*--The container of all the divs for the diary pages--*/
+.diarypagecontainer		{width:370px; height:576px; top:0px; left:495px; position:relative; overflow:hidden; } /*--The container of all the divs for the diary pages--*/
 .diarypage				{width:370px; height:566px; padding-top:276px; top:0px; left:0px; position:relative; z-index:1; } /*--Styles each page (div) of the diary pages--*/
 #diaryimage				{width:480px; height:360px; bottom:-37px; left:430px; position:absolute; }
 
 /*--Styles the elements on the 'first page' of each section--*/
-.box 							{width:520px; height:250px; left:240px; top:250px; background-color:transparent; background-image:url(images/bgbox.png); position:absolute; }
+.box 						{width:520px; height:250px; left:240px; top:250px; background-color:transparent; background-image:url(images/bgbox.png); position:absolute; }
 .box p						{color:#ffffff; font-size:42px; text-align:center; padding: 10px 40px 0px 40px; line-height:1em; }
 .textreadmore 				{right:10px; bottom:10px; position:absolute; text-align:right; }
-.textreadmore a			{color:#ffffff; font-size:24px;}
-.textreadmore a:hover	{text-shadow: 0px 0px 10px #ffffff,0px 0px 10px #ffffff; }  
+.textreadmore a				{color:#ffffff; font-size:24px;}
+.textreadmore a:hover		{text-shadow: 0px 0px 10px #ffffff,0px 0px 10px #ffffff; }  
 .shownextpage 				{} /*--Used for selecting some Javascript actions--*/
 
 /*--Styles the elements on the 'second page' of each section--*/
 .textcontainer			{width:960px; left:20px; bottom:90px; background-image:url(images/bgtransparent.png); position:absolute; z-index:1; }
 .successcontainer		{width:960px; left:20px; bottom:90px; background-image:url(images/bgtransparent.png); position:absolute; z-index:1; } /*--This is the same as .textcontainer but it is not altered by JS--*/
-.diarycontainer		{width:960px; left:20px; bottom:90px; background-image:url(images/bgtransparent.png); position:absolute; z-index:1; } /*--This is the same as .textcontainer but it is not altered by JS--*/
+.diarycontainer			{width:960px; left:20px; bottom:90px; background-image:url(images/bgtransparent.png); position:absolute; z-index:1; } /*--This is the same as .textcontainer but it is not altered by JS--*/
 .iframecontainer		{width:1000px; height:491px; left:0px; bottom:0px; background-image:url(images/bgtransparent.png); position:absolute; z-index:1; }
-#iframe 					{position:relative; left:180px; width:640px; height:360px;}
+#iframe 				{position:relative; left:180px; width:640px; height:360px;}
 .textarea 				{} /*--Purely used to designate which elements the js changes the text size of--*/
-.normal 					{font-size:13px; color:#444444; }
-.big 						{font-size:16px; color:#bbbbbb; }
-.bigger 					{font-size:18px; color:#444444; }
-.darkerbg 				{background-image:url(images/bgtransparentdark.png); } /*--Used for the contact us page only--*/
+.normal 				{font-size:13px; color:#444444; }
+.big 					{font-size:16px; color:#bbbbbb; }
+.bigger 				{font-size:18px; color:#444444; }
+.darkerbg 				{background-image:url(ARCHIVE/v1.1_akascia/images/bgtransparentdark.png); } /*--Used for the contact us page only--*/
 .textheader 			{left:28px; top:10px; position:absolute; }
 .text 					{width:280px; top:0px; left:0px; margin:60px 0px 15px 30px; float:left; position:relative; }
 .textexpertise			{width:300px; }
@@ -73,54 +73,53 @@ body 						{background-color:#000000; background-image:url(images/bgpage.png); b
 .invisible 				{visibility:hidden; } /*--Purely used to designate which elements the js fades--*/
 .darkscreen 			{left:0px; right:0px; top:0px; bottom:0px; position:absolute; background-image:url(images/bgtransparent.png); z-index:0; }
 .bulletlist  			{margin-left:15px; }
-.bulletlist  li		{margin-bottom:1em; }
+.bulletlist  li			{margin-bottom:1em; }
 
-/*--Styles the 'advance bar' on the bottom of each page - images, quotes, text etc--*/
+/*--Styles the 'advance bar' on the bottom of each page - images, text etc--*/
 .advancebar 			{width:1000px; height:70px; left:0px; bottom:0px; position:absolute; z-index:1; }
 .advancebar a 			{width:1000px; height:70px; display:block; position:absolute; }
 .advancebar a:hover 	{background-image:url(images/bgtransparent.png); }
 .advanceicon 			{width:53px; height:53px; right:8px; top:10px; position:absolute; }
 .advancetext 			{right:70px; bottom:30px; position:absolute; color:#ffffff; font-size:42px; }
-.advancequote 			{left:0px; bottom:0px; position:absolute; overflow:hidden; clip:rect(0, 550px, 20px, 0); font-family:'Open Sans Condensed', Arial, Helvetica, sans-serif; font-style:italic; color:#ffffff; font-size:18px; padding: 0px 5px 5px 5px; }
 
 /*--Sets up the positioning and styling for divs containing images for non java-enabled*/
 #backgroundwindow		{width:1000px; height:666px; left:0px; top:0px; position:absolute; overflow:hidden; z-index:-2; }
 #background 			{width:8000px; height:666px; left:0px; top:0px; position:relative; }
 
 /*--Sets up the home page--*/
-.homebox 					{width:520px; height:250px; }
-.homebox a					{position:absolute; left:20px; top:40px; width:480px; height:200px; display:block; color:#ffffff; }
+.homebox 					{position:absolute; top:10px; left:10px; bottom:0px; right:0px; }
+.homebox a					{color:#bbbbbb; }
 .homebox a:hover 			{text-shadow: 0px 0px 20px #ffffff,0px 0px 10px #ffffff; }
-.hometext					{color:#ffffff;}
-.hometextbig				{font-size:42px; position: absolute; top:67px; right: 200px; }
-.hometextsmall				{font-size:20px; position: absolute; width:480px; bottom:5px;  }
-.homeboximg					{position:absolute; width:157px; height:156px; overflow:hidden; top:0px; right:60px; }
-.homebox a:hover > .homeboximg img {position: relative; top:-156px; }
+.hometextbig				{position:relative; top:0px; left:30px; font-size:46px; line-height:1.1em; }
+.hometextsmall				{position: absolute; bottom:23px; right:60px; text-align:right; }
+.homeboxicon				{position: absolute; width:63px; height:63px; overflow:hidden; bottom:0px; right:0px; }
+.homebox a:hover > .homeboxicon img {position: absolute; top:-63px; }
 
 /*--Sets up the footer--*/
 #footer						{z-index:0; }
 #icons						{left: 0px; top: 725px; position:absolute; }
-.icon							{left: 0px; width: 60px; float:left; text-align:center; }
+.icon						{left: 0px; width: 60px; float:left; text-align:center; }
 .icon a						{font-size:18px; color:#ffffff; text-align:center;}
 .icon a:hover				{text-shadow: 0px 0px 10px #ffffff,0px 0px 10px #ffffff; } 
-#stalkus						{right: 0px; top: 751px; width: 204px; height: 34px; position:absolute; }
-#logo							{left: 376px; top: 695px; width: 247px; height: 121px; position: absolute;  }
-#footertext					{width:1000px; left:0px; top:850px; position:absolute; text-align:center; font-size:11px; color:#333333; }
+#stalkus					{right: 0px; top: 751px; width: 204px; height: 34px; position:absolute; }
+#logo						{left: 376px; top: 695px; width: 247px; height: 121px; position: absolute;  }
+#footertext					{width:1000px; left:0px; top:850px; position:absolute; text-align:center; font-size:11px; color:#666666; }
 
 /*--General modifiers--*/
-.addrightmargin			{margin-right:2px; }
+.addrightmargin				{margin-right:2px; }
 .addtopmmargin				{margin-top:22px; }
 .addbottommargin			{margin-bottom:10px; }
-.addbottommarginsmall	{margin-bottom:5px; }
+.addbottommarginsmall		{margin-bottom:5px; }
 .bold, a.bold				{font-weight:bold}
 .centre, a.centre			{text-align:center}
 .label						{width:45px; float:left; margin-top:1px; }
 .input						{width:110px; background-color:#1c1c1c; border:#333333 solid 1px; }
 .floatright					{float:right; }
-.highlight, a.highlight	{color:#ffffff}
-.alignimg, img.alignimg {position:relative; top:3px; }
-.our							{font-size:12px;}
-.didyouknow					{font-size:24px; color:#444444; }
-.didyouknowwhite			{color:#ffffff;}
+.highlight, a.highlight		{color:#ffffff}
+.grey, a.grey				{color:#bbbbbb}
+.alignimg, img.alignimg 	{position:relative; top:3px; }
+.our						{font-size:12px;}
+.didyouknow					{font-size:24px; color:#666666; }
 .condensedtext				{font-family:'benchnine', Arial, Helvetica, sans-serif;}
 .textsize 					{position:absolute; right:10px; top:10px; text-align:center; display:none; font-size:18px }
+.smallfont					{font-size:24px; }

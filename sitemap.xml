@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+		http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"><!-- created with Seo Panel:www.seopanel.in -->
+		<url>
+			<loc>http://www.akascia.com</loc>
+		   	<lastmod>2014-02-25</lastmod>
+		    <changefreq>monthly</changefreq>
+	 	</url>
+ 	
+		<url>
+			<loc>http://www.akascia.com/newsletters/latest_edition.html</loc>
+		   	<lastmod>2013-06-25</lastmod>
+		    <changefreq>never</changefreq>
+	 	</url>
+		
+		<url>
+			<loc>http://www.akascia.com/newsletters/2011_q3_edition_cmversion.html</loc>
+		   	<lastmod>2011-11-25</lastmod>
+		    <changefreq>never</changefreq>
+	 	</url>
+		
+		<url>
+			<loc>http://werock.akascia.com/</loc>
+		   	<lastmod>2014-02-25</lastmod>
+		    <changefreq>weekly</changefreq>
+	 	</url>
+
+		<url>
+			<loc>http://www.akascia.com/ak_web_downloads/10_questions_to_ask_a_headhunter.pdf</loc>
+		   	<lastmod>2014-02-25</lastmod>
+		    <changefreq>monthly</changefreq>
+	 	</url>
+
+		<url>
+			<loc>http://www.akascia.com/ak_web_downloads/10_questions_to_ask_a_headhunter.pdf</loc>
+		   	<lastmod>2013-06-25</lastmod>
+		    <changefreq>monthly</changefreq>
+	 	</url>
+		
+		<url>
+			<loc>http://www.akascia.com/newsletters/infographics/great_vs_average.html</loc>
+		   	<lastmod>2013-06-25</lastmod>
+		    <changefreq>monthly</changefreq>
+	 	</url>
+		
+		<url>
+			<loc>http://www.akascia.com/newsletters/infographics/us_vs_them.html</loc>
+		   	<lastmod>2013-06-25</lastmod>
+		    <changefreq>monthly</changefreq>
+	 	</url>
+		
+ 	</urlset>

@@ -1,6 +1,6 @@
 # Akascia-Website
 All the Akascia Website Versions from 2010 until now.
 
-Version 1.1 Circa 2011
+Version 2.0 Circa 2013
 
-Switch to Server Side Includes
+Switch to full screen width background

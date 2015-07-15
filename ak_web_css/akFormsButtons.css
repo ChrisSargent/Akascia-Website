@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.ak_button,
+.ak_input 			{border:none!important; padding:0; text-decoration:none; border-radius:0px;
+					display:inline-block; mso-hide:all; height:38px; line-height:38px;
+					-webkit-appearance:none;
+					-webkit-text-size-adjust:none;
+					-webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+     				-moz-box-sizing: border-box; /* For all Gecko based browsers */
+         			 box-sizing: border-box; }
+.ak_input			{font-size:12px; width:180px; color:#666!important; font-family:Montserrat, Tahoma, Arial, Helvetica, sans-serif; font-weight:300!important; padding:0 0 0 5px; vertical-align:bottom;}
+.ak_button			{background-color:#51a2b3; font-size:14px; color:#fff!important; font-family:Montserrat, Tahoma, Arial, Helvetica, sans-serif; font-weight:normal!important; text-transform:uppercase; text-align:center; padding:0 30px; letter-spacing:2px; }
+.ak_button_big		{height:40px; line-height:40px; border-radius:6px; }
+
+a.ak_button,
+a.ak_button:hover,
+a.ak_button:active,
+a.ak_button:visited {color:#fff!important; text-decoration:none; }
+.ak_button:hover	{background-color:#61c7dd; cursor:pointer; }

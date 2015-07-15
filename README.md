@@ -1,6 +1,8 @@
 # Akascia-Website
 All the Akascia Website Versions from 2010 until now.
 
-Version 2.0 Circa 2013
+Version 2.1 Circa 2014; Latest and Final Version
 
-Switch to full screen width background
+Changed Homepage, Added Articles Page etc
+
+Check the Releases for previous versions.

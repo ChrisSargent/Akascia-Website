@@ -1,56 +1,33 @@
 //This is called whenever the hash changes so Google Analytics tracks pages.
 function track_anchor(){
-	_gaq.push(['_trackPageview', location.pathname + location.search + location.hash]);
+	ga('send', 'pageview', '/' + location.hash);
 }
 
-/*
-//Ensures that the whole page doesn't scroll when a 'Scrollable' div reaches the end
-$(function(){
-$( '.scrollable' ).
-    bind( 'mousewheel DOMMouseScroll', function ( e ) {
-        var delta = e.wheelDelta || -e.detail;
-        this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
-        e.preventDefault();
-    });
-});
-*/
 
-
-function validateForm(){
-	var x=document.forms["ak_subForm"]["cm-name"].value;
-	if (x==null || x=="")
-	  {
-	  alert("Please fill in the 'Name' field.");
-	  return false;
-	  }
+function callToutApp(){
+	var t = document.createElement('script');
+	t.type = 'text/javascript';
+	t.async = true;
 	
-	var z=document.forms["ak_subForm"]["ykjyl-ykjyl"].value;
-	var atpos=z.indexOf("@");
-	var dotpos=z.lastIndexOf(".");
-	if (atpos<1 || dotpos<atpos+2 || dotpos+2>=z.length)
-	  {
-	  alert("Please include a valid e-mail address");
-	  return false;
-	  }
-}
+	var u = document.location.href;
+	var ti = document.title;
+	var hsh = window.location.hash;
+	var i = "?title=" + encodeURIComponent(hsh) + "&url=" + encodeURIComponent(u);
+	
+	t.src =  'https://go.toutapp.com/site/tw1t9p9f6d' + i;
+	var st = document.getElementsByTagName('script')[0];
+	
+	st.parentNode.insertBefore(t, st);
+	}
+
 
 //Field validation for Web Leads
 function validateLeadForm(formid){
-	var a=document.forms[formid]["fields_fname"].value;	
-	if (a==null || a=="")
-	  {
-	  alert("Please fill in your First Name.");
-	  return false;
-	  }
 	
-	var b=document.forms[formid]["fields_lname"].value;
-	if (b==null || b=="")
-	  {
-	  alert("Please fill in your Last Name.");
-	  return false;
-	  }
-	
-	var c=document.forms[formid]["fields_email"].value;
+	var fsource=window.location.href;
+	document.forms[formid]["fieldSource"].value=fsource;
+		
+	var c=document.forms[formid]["fieldEmail"].value;
 	var atpos=c.indexOf("@");
 	var dotpos=c.lastIndexOf(".");
 	if (atpos<1 || dotpos<atpos+2 || dotpos+2>=c.length)
@@ -144,7 +121,7 @@ function set_pg_variables(){
 		show_selected=true
 		break
 
-		case '#socialise':
+		case '#resources':
 		bg_position='-800%'
 		show_selected=false
 		break
@@ -198,32 +175,31 @@ function move_selected(){
 
 function page_transition(){
 	target_hash = window.location.hash;
-	if (target_hash == ''){
+	if (target_hash == ''){		//Checks if the current page is the plain home page and if so, doesn't make any page transitions.
+		track_anchor();
+		callToutApp();
 		return;
 	}
 
 	target_hash_text = target_hash.replace(/[0-9]/g, '');
-	if (target_hash_text == '#diary') {	
+	if (target_hash_text == '#diary') {		//Checks if the current page is a diary page and doesn't do any clearing of items.
 		set_pg_variables();
 		movebg_fadepg();
+		track_anchor();
+		callToutApp();
 		return;
 	}
 	
 	clear_all();
-	set_pg_variables(); //Runs set_pg_variables to set the correct values of the variables: bg_position, according to the hash value of the target page.			
-	movebg_fadepg(); //Sets up the right page according to the requested hash
+	set_pg_variables();		//Runs set_pg_variables to set the correct values of the variables: bg_position, according to the hash value of the target page.			
+	movebg_fadepg();		//Sets up the right page according to the requested hash
 	move_selected();
 	track_anchor();
+	callToutApp();
 }
 
 window.onhashchange=function (){
-	if (document.documentElement.clientWidth < 700) {
-		return;
-	}
-	
-	else {
 		page_transition();
-	}
 }
 
 function initialise(){
@@ -238,11 +214,5 @@ $(window).bind("load", function() {
 });
 
 $(document).ready(function(){
-	if (document.documentElement.clientWidth < 700) {
-	return;
-	}
-	
-	else {
 	initialise();
-	}
 });

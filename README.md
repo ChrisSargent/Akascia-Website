@@ -3,8 +3,4 @@ All the Akascia Website Versions from 2010 until now.
 
 Version 2.2 2015; Final Landing Page Version
 
-Version 2.1 Circa 2014; Latest and Final Version
-
-Changed Homepage, Added Articles Page etc
-
-Check the Releases for previous versions.
+Since Akascia has closed down, we've put up a site to act as a landing page for people looking us up.

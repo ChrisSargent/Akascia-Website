@@ -1,0 +1,52 @@
+
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "{{ site.name }}",
+        "legalName": "{{ site.legal_name }}",
+        "url": "{{ site.url }}",
+        "description": "{{ site.description }}",
+        "logo": "{{ site.og_logo }}",
+        "image": "{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.og_image }}{% endif %}",
+        "foundingDate": "{{ site.foundingDate }}",
+        "founder": "{{ site.founder}}",
+        "email": "{{ site.email }}",
+        "telephone": "{{ site.telephone }}",
+        "address": [{
+            "@type": "PostalAddress",
+            "addressCountry": "France",
+            "addressLocality": "Juan-les-Pins",
+            "addressRegion": "Alpes-Maritimes",
+            "postalCode": "06160",
+            "streetAddress": "Le Saphir, Rue Bricka"
+        },{
+            "@type": "PostalAddress",
+            "addressCountry": "United Kingdom",
+            "addressLocality": "Rugby",
+            "addressRegion": "Warwickshire",
+            "postalCode": "CV21 4DU",
+            "streetAddress": "29, Crick Road"
+        }],
+        "contactPoint": [{
+            "@type": "ContactPoint",
+            "telephone": "{{ site.telephone }}",
+            "contactType": "customer service"
+        },
+        {
+            "@type": "ContactPoint",
+            "telephone": "{{ site.telephone }}",
+            "contactType": "sales"
+        }],
+        "sameAs": [
+            "http://www.facebook.com/{{ site.facebook_page }}",
+            "http://www.twitter.com/{{ site.twitter_username }}",
+            "http://plus.google.com/{{ site.google_plus }}",
+            "http://https://www.linkedin.com/company/{{ site.linkedin_page }}",
+            "http://github.com/{{ site.github_username }}",
+            "http://instagram.com/{{ site.instagram_user }}",
+            "http://www.pinterest.com/{{ site.pinterest_user }}",
+            "https://www.youtube.com/c/{{ site.youtube_user }}"
+        ]
+    }
+</script>

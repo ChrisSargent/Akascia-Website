@@ -1,0 +1,54 @@
+//------ Colors ------
+$brand-color: #1a1a1a
+$brand-color-highlighted: #51A2B3
+$brand-color-bright: #61C7DD
+$hi-trans: rgba(255, 255, 255, .1)
+$mid-trans: rgba(255, 255, 255, .2)
+$lo-trans: rgba(255, 255, 255, .5)
+$muted: #999
+$mutedDark: darken($muted, 30%)
+
+//------ Colored Elements ------
+$circle-hover-bgcolor: $mid-trans
+$nav-border-bottom-colour: $mid-trans
+$nav-hover-bgcolor: $mid-trans
+$nav-bar-color: rgba(black, 0.8)
+$mob-nav-seperator: $hi-trans
+
+//------ Typography ------
+$main-text-color: #ccc
+$link-color: $brand-color-highlighted
+$link-color-highlighted: $brand-color-bright
+$paragraph-font: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif
+$headings-font: $paragraph-font
+
+//------ Others ------
+$thinborder: 1px solid
+$thickborder: 2px solid
+
+//------ Layout ------
+$largeScreen: "screen and (min-width: 1024px)"
+$mediumScreen: "screen and (max-width: 640px)"
+$smallScreen: "screen and (max-width: 380px)"
+
+$navBreakToLarge: "screen and (min-width: 661px) and (max-width: 780px)"
+$aboveNavBreak: "screen and (min-width: 661px)"
+$navBreak: "screen and (max-width: 660px)"
+
+$btnsBreak: "screen and (max-width: 750px)"
+
+%clearfix
+    &:after
+        content: " "
+        display: table
+        clear: both
+
+//------ Sizes ------
+
+$jumbo: 3em // 60
+$xxlarge: 2em // 40
+$xlarge: 1.5em // 30
+$large: 1.250em // 25
+$normal: 1em // 20
+$small: 0.8em // 16
+$xsmall: 0.7em // 14

@@ -1,0 +1,42 @@
+/*------ Buttons ------*/
+
+button, a.button
+    font-size: 14px
+    color: $main-text-color
+    text-decoration: none
+    border-radius: 2px
+    display: inline-block
+    cursor: pointer
+    line-height: 2.5em
+    padding: 0 1.5em
+
+.social-buttons a.button
+    color: $muted
+    border: $thinborder $mid-trans
+    margin: 0 0.1em
+    text-transform: uppercase
+    font-weight: bold
+
+    &:hover,
+    &:focus,
+    &:active
+        color: $main-text-color
+        background-color: lighten($brand-color, 10%)
+        border-color: $hi-trans
+        [class^="icon-"],
+        [class*=" icon-"]
+            color: $main-text-color
+
+    [class^="icon-"],
+    [class*=" icon-"]
+        margin-left: 10px
+        font-size: 15px
+        color: $muted
+
+    @media #{$btnsBreak}
+        display: block
+        margin: 0 auto 1em auto
+        width: 90%
+        max-width: 300px
+        &:last-child
+            margin-bottom: 0px

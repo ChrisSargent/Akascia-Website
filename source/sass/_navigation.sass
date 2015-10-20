@@ -1,0 +1,111 @@
+.navbar
+    position: fixed
+    right: 0
+    left: 0
+    top: 0
+    z-index: 1
+    transition: all 0.5s ease-in-out
+    border-bottom: $thinborder transparent
+    background-color: transparent
+
+    .nav-list-container
+        float: right
+        margin-right: 0.5em
+
+    li
+        float: left
+
+        + li
+            margin-left: 0.2em
+        a
+            display: block
+            text-transform: uppercase
+            font-size: $xsmall
+            font-weight: 700
+            text-align: center
+            line-height: 46px
+            padding: 0 1em
+            margin: 10px 0
+            transition: all 0.2s ease-in-out
+            color: $main-text-color
+            letter-spacing: 2px
+            text-decoration: none
+            &:hover,
+            .active
+                background-color: $nav-hover-bgcolor
+
+            @media #{$navBreakToLarge}
+                font-size: 13px
+
+    .menu-toggle
+        display: none
+
+    .logo
+        display: inline-block
+        height: 40px
+        width: auto
+        margin: 10px 10px
+        transition: all 0.2s ease-in-out
+
+    &.navbar-shrink
+        @media #{$aboveNavBreak}
+            border-bottom: $thinborder $nav-border-bottom-colour
+            background-color: $nav-bar-color
+            .nav-list-container a
+                margin: 0
+            .logo
+                margin: 3px 10px
+
+    @media #{$navBreak}
+        padding: 0
+        &.navbar-shrink
+            border-bottom: $thinborder $nav-border-bottom-colour
+            background-color: $nav-bar-color
+            transition: all 0.2s ease-in-out
+
+        .nav-list-container
+            float: none
+            max-height: 0px
+            overflow: scroll
+            background-color: lighten($brand-color, 5%)
+            margin: 0
+
+            li
+                float: none
+                margin: 0
+            a
+                border-top: $thinborder $mob-nav-seperator
+                margin: 0
+                padding: 1em 1em
+
+        .logo
+            margin: 6px 10px
+
+        .menu-toggle
+            display: block
+            float: right
+            height: 52px
+            padding: 13px 1em
+
+        .menu-bars
+            display: block
+            width: 30px
+            height: 4px
+            background-color: white
+            border-radius: 2px
+            &::before,
+            &::after
+                @extend .menu-bars
+                content: ' '
+                display: block
+                position: relative
+                top: 10px
+                margin-bottom: 6px
+                clear: both
+
+input#mobile-nav-check
+    display: none
+    @media #{$navBreak}
+        &:checked + .nav-list-container
+            max-height: 400px
+            transition: all 0.2s ease-in-out

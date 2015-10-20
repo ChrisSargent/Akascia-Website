@@ -1,0 +1,20 @@
+
+<nav id="main-nav" class="navbar">
+    <a href="http://www.akascia.com/akascia.html"><img src="http://www.akascia.com/ak_web_images/akascia_web_logo_notag.png" alt="Akascia Executive Search Logo" class="logo"></a>
+    <label for="mobile-nav-check" class="menu-toggle" aria-expanded="false" aria-controls="main-nav-list">
+        <span class="sr-only">Toggle mobile navigation</span>
+        <span class="menu-bars"><span>
+    </label>
+    <input type="checkbox" id="mobile-nav-check" />
+    <div id="main-nav-list" class="nav-list-container">
+        {% if page.links %}
+        <ul class="nav-list">{% for link in page.links %}
+            <li><a href="{{ link.url }}">{{ link.text }}</a></li>{% endfor %}
+        </ul>
+        {% else %}
+        <ul class="nav-list">{% for link in site.landing_links %}
+            <li><a href="{{ link.url }}">{{ link.text }}</a></li>{% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+</nav>

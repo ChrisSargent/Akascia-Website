@@ -1,0 +1,16 @@
+{
+  "name": "Akascia",
+  "version": "2.2",
+  "authors": [
+    "Chris Sargent <chris@stickypixel.com>"
+  ],
+  "description": "Final landing page for Akascia Executive Search",
+  "license": "MIT",
+  "homepage": "http://www.akascia.com",
+  "ignore": [
+    "**/.*"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {}
+}

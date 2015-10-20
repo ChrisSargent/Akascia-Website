@@ -1,0 +1,50 @@
+/*--- Typography ---*/
+
+body
+    color: $main-text-color
+    font-weight: 400
+    font-family: $paragraph-font
+    font-size: 20px
+    @media #{$mediumScreen}
+        font-size: 16px
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+    font-family: $headings-font
+    font-size: $xlarge
+    font-weight: 700
+    text-transform: uppercase
+    margin-bottom: 2em
+    line-height: 1.2em
+
+p
+    font-size: $normal
+    line-height: 1.6em
+    margin-bottom: 2em
+
+    a
+        color: $link-color
+        border-bottom: $thinborder transparent
+        text-decoration: none
+        &:hover,
+        &:focus,
+        &:active
+            border-bottom: $thinborder $link-color-highlighted
+            text-decoration: none
+            color: $link-color-highlighted
+            outline: 0
+
+a,
+button,
+    transition: all .2s ease-in-out
+
+p.legal
+    margin-top: 5em
+    color: $muted
+    font-size: $xsmall
+    @media #{$mediumScreen}
+        font-size: $small

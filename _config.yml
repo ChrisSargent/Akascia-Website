@@ -1,0 +1,48 @@
+# Site settings
+name: Akascia Executive Search
+title: Executive search in EMEA & APAC for startup, VC funded and pre-IPO technology firms
+email: info@akascia.com
+description: Executive search for startup, VC funded, pre-IPO and otherwise plain-exciting technology companies hiring awesome people in EMEA and APAC.
+append_desc: ""
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: http://www.akascia.com
+author: Chris Sargent
+keywords: akascia executive search EMEA APAC startup pre-IPO VC funded awesome people
+twitter_username: Chris5argent
+github_username:  ChrisSargent
+google_plus: Akascia
+linkedin_page: akascia
+facebook_page: Akascia
+youtube_user: akascia
+fb_admins: 731575475
+fb_profile_id: 114216411121
+og_image: http://www.akascia.com/ak_web_images/akascia_fb_logo.png
+og_logo: http://www.akascia.com/ak_web_images/akascia_fb_logo.png
+telephone: +44 (0) 2070 787 665
+autelephone: +61 (0) 2 9977 1184
+foundingDate: 2009-03-18
+founder: Chris Sargent
+address: 29 Crick Road, Rugby, Warwickshire, CV21 4DU
+auaddress: Suite 104, 25-27 South Steyne, Manly, NSW, 2095
+legal_name: Sticky Pixel Ltd
+company_no: 6849452
+aucompany_no: 18141870984
+
+
+# Build settings
+markdown: kramdown
+source: source
+destination: build
+exclude: [sass, js, img]
+keep_files: [css, js, img]
+collections:
+    home:
+        output: false
+
+landing_links:
+    -   url: "#about"
+        text: Why?
+    -   url: "#contact"
+        text: Contact Founders
+    -   url: "http://www.akascia.com/akascia.html"
+        text: Visit Akascia's Old Site

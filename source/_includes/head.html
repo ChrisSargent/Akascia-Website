@@ -1,0 +1,57 @@
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+    <title>{% if page.title %}{{ page.title | append: ' - ' | append: site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}" />
+
+    {% if page.use_sitedesc %}
+    <meta name="description" content="{{ site.description | truncate: 160 }}" />
+    {% elsif page.description %}
+    <meta name="description" content="{{ page.description | append: site.append_desc | truncate: 160 }}" />
+    {% else %}
+    <meta name="description" content="{{ page.content | strip_html | strip_newlines | prepend: ' - ' | prepend: page.title | truncate: 160 }}" />
+    {% endif %}
+    <meta name="author" content="{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}" />
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Canonical link for any .fr or non-www traffic -->
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    <!-- Facebook Open Graph Info -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+    {% if page.use_sitedesc %}
+    <meta name="og:description" content="{{ site.description | truncate: 160 }}" />
+    {% elsif page.description %}
+    <meta name="og:description" content="{{ page.description | append: site.append_desc | truncate: 160 }}" />
+    {% else %}
+    <meta name="og:description" content="{{ page.content | strip_html | strip_newlines | prepend: ' - ' | prepend: page.title | truncate: 160 }}" />
+    {% endif %}
+    <meta property="fb:admins" content="{{ site.fb_admins }}" />
+    <meta property="fb:profile_id" content="{{ site.fb_profile_id }}" />
+    <meta property="og:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.og_image }}{% endif %}" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1500" />
+    <meta property="og:image:height" content="785" />
+
+    <!-- Google+ Stuff -->
+    <link rel="publisher" href="https://plus.google.com/{{ site.google_plus }}" />
+
+    <!-- CSS Files -->
+    <link href="/css/styles.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons etc -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+</head>
